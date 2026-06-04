@@ -314,6 +314,29 @@
   .plan-feat{border:1px solid rgba(0,120,240,.28);box-shadow:0 30px 70px -28px rgba(0,120,240,.45),inset 0 1px 0 rgba(255,255,255,.7);transform:translateY(-6px)}
   .plan-premise{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:34px}
   .lf-plano-pill{display:inline-flex;align-items:center;gap:8px;background:rgba(0,120,240,.08);border:1px solid rgba(0,120,240,.2);color:var(--primary-deep);font-size:13px;font-weight:700;padding:7px 14px;border-radius:99px;margin:-8px 0 18px}
+
+  /* ===== CLIENTES (carrossel infinito) ===== */
+  #clientes{position:relative;padding:62px 0 56px;overflow:hidden}
+  #clientes::before{content:"";position:absolute;left:50%;top:50%;width:min(900px,90%);height:240px;transform:translate(-50%,-50%);background:radial-gradient(ellipse at center,rgba(0,120,240,.10),transparent 70%);pointer-events:none}
+  .clients-head{text-align:center;margin-bottom:30px;position:relative}
+  .clients-sub{color:var(--ink-2);font-size:15.5px;max-width:560px;margin:10px auto 0;line-height:1.5}
+  .marquee{position:relative;width:100%;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 11%,#000 89%,transparent);mask-image:linear-gradient(90deg,transparent,#000 11%,#000 89%,transparent)}
+  .marquee-track{display:flex;width:max-content;will-change:transform;animation:marquee 36s linear infinite}
+  .marquee:hover .marquee-track{animation-play-state:paused}
+  .marquee-group{display:flex;flex:none}
+  .logo-chip{flex:none;display:grid;place-items:center;height:86px;min-width:196px;margin:0 11px;padding:0 28px;border-radius:18px;background:var(--glass-strong);border:1px solid var(--glass-brd);box-shadow:var(--shadow-sm);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);transition:transform .3s,box-shadow .3s}
+  .logo-chip:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+  .logo-chip svg{height:48px;width:auto;max-width:158px;display:block}
+  @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  @media(max-width:560px){
+    #clientes{padding:46px 0 40px}
+    .logo-chip{height:70px;min-width:150px;margin:0 7px;padding:0 18px}
+    .logo-chip svg{height:38px;max-width:122px}
+  }
+  @media(prefers-reduced-motion:reduce){
+    .marquee{-webkit-mask-image:none;mask-image:none}
+    .marquee-track{animation:none;width:100%;flex-wrap:wrap;justify-content:center;gap:14px 0}
+  }
   @media(max-width:920px){
     .plans{grid-template-columns:1fr;max-width:420px}
     .plan-feat{transform:none}
@@ -391,6 +414,93 @@
       <div class="t"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg> Sem multa</div>
       <div class="t"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg> Sem contrato abusivo</div>
       <div class="t"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg> IA otimizando 24/7</div>
+    </div>
+  </div>
+</section>
+
+<!-- CLIENTES: carrossel infinito -->
+<section id="clientes">
+  <div class="wrap clients-head">
+    <div class="eyebrow reveal">Quem acelera com a gente</div>
+    <p class="clients-sub reveal d1">De negócios locais a operações em escala — empresas de todos os tamanhos já crescem com a Acelera Lead.</p>
+  </div>
+
+  <div class="marquee" aria-label="Empresas que confiam na Acelera Lead">
+    <div class="marquee-track">
+      <div class="marquee-group">
+
+        <!-- LL Phones -->
+        <div class="logo-chip" title="LL Phones">
+          <svg viewBox="0 0 250 64" role="img" aria-label="LL Phones">
+            <defs>
+              <linearGradient id="llGalaxy" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#6E49E0"/>
+                <stop offset=".42" stop-color="#2C74E0"/>
+                <stop offset=".72" stop-color="#15A8C6"/>
+                <stop offset="1" stop-color="#2FD08C"/>
+              </linearGradient>
+            </defs>
+            <g transform="translate(4,12) scale(1.6)" fill="url(#llGalaxy)">
+              <path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09z"/>
+              <path d="M15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/>
+            </g>
+            <g fill="#101B2A">
+              <path d="M72 21h8v4.6h-3v12.8h3V43h-8z"/>
+              <path d="M84 21h3.6v16.6h7.4V42H84z"/>
+            </g>
+            <text x="102" y="40" font-family="'Bricolage Grotesque',sans-serif" font-weight="700" font-size="26" letter-spacing="1.5" fill="#101B2A">PHONES</text>
+          </svg>
+        </div>
+
+        <!-- Logo vermelha -->
+        <div class="logo-chip" title="Cliente">
+          <svg viewBox="0 0 110 82" role="img" aria-label="Cliente Acelera Lead">
+            <g fill="#F4200F">
+              <path d="M4 30 C28 16 56 9 98 9 C88 19 70 26 50 30 L70 29 C70 35 60 39 44 40 C28 41 12 38 5 35 C2 34 2 31 4 30 Z"/>
+              <path transform="translate(30,40) scale(1.7)" d="M14 2 L5 14 L11 14 L9 22 L19 9 L12 9 Z"/>
+            </g>
+          </svg>
+        </div>
+
+        <!-- CROSS -->
+        <div class="logo-chip" title="Cross">
+          <svg viewBox="0 0 232 80" role="img" aria-label="Cross">
+            <g transform="translate(6,7)">
+              <ellipse cx="14" cy="30" rx="14" ry="19" fill="#F07A1E"/>
+              <ellipse cx="56" cy="30" rx="14" ry="19" fill="#F07A1E"/>
+              <path d="M18 20 Q35 8 52 20 Q60 38 48 56 Q44 62 40 58 Q35 64 30 58 Q26 62 22 56 Q10 38 18 20 Z" fill="#F07A1E"/>
+              <path d="M35 36 Q33 54 30 66 Q35 71 40 66 Q37 50 35 36 Z" fill="#F07A1E"/>
+              <path d="M27 52 Q22 60 26 66" stroke="#F07A1E" stroke-width="3.4" fill="none" stroke-linecap="round"/>
+              <path d="M43 52 Q48 60 44 66" stroke="#F07A1E" stroke-width="3.4" fill="none" stroke-linecap="round"/>
+              <circle cx="26" cy="29" r="2.8" fill="#fff"/>
+              <circle cx="44" cy="29" r="2.8" fill="#fff"/>
+            </g>
+            <path d="M86 28 Q150 19 214 28" stroke="#F07A1E" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <text x="150" y="52" text-anchor="middle" font-family="'Bricolage Grotesque',sans-serif" font-weight="800" font-size="30" letter-spacing="3" fill="#F07A1E">CROSS</text>
+            <path d="M86 62 Q150 71 214 62" stroke="#F07A1E" stroke-width="3" fill="none" stroke-linecap="round"/>
+          </svg>
+        </div>
+
+        <!-- Ícaro Games & Cell -->
+        <div class="logo-chip" title="Ícaro Games & Cell">
+          <svg viewBox="0 0 250 72" role="img" aria-label="Ícaro Games e Cell">
+            <g transform="translate(4,5)">
+              <rect x="2" y="2" width="40" height="60" rx="9" fill="none" stroke="#0E1620" stroke-width="5.5"/>
+              <path d="M15 50V32l-5 5M15 32l5 5" fill="none" stroke="#0E1620" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M28 54V28l-5 5M28 28l5 5" fill="none" stroke="#0E1620" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+              <rect x="20" y="-1" width="9" height="9" rx="2" fill="#FB8C00" transform="rotate(10 24 3)"/>
+              <rect x="34" y="-2" width="13" height="13" rx="2.5" fill="#8BC34A" transform="rotate(10 40 4)"/>
+              <rect x="26" y="10" width="12" height="12" rx="2" fill="#E53935" transform="rotate(10 32 16)"/>
+              <rect x="40" y="12" width="11" height="11" rx="2" fill="#29B6F6" transform="rotate(10 45 17)"/>
+              <rect x="33" y="23" width="8" height="8" rx="1.6" fill="#7E57C2" transform="rotate(10 37 27)"/>
+              <rect x="14" y="9" width="7" height="7" rx="1.4" fill="#FDD835" transform="rotate(10 17 12)"/>
+            </g>
+            <text x="64" y="40" font-family="'Bricolage Grotesque',sans-serif" font-weight="800" font-size="30" letter-spacing="1" fill="#0E1620">ICARO</text>
+            <text x="65" y="56" font-family="'Plus Jakarta Sans',sans-serif" font-weight="600" font-size="11" letter-spacing="3.5" fill="#46566B">GAMES &amp; CELL</text>
+          </svg>
+        </div>
+
+      </div>
     </div>
   </div>
 </section>
@@ -732,6 +842,26 @@
 
   leadForm.addEventListener('input',e=>{const f=e.target.closest('.field');if(f)f.classList.remove('invalid')});
   leadForm.addEventListener('change',e=>{const f=e.target.closest('.field');if(f)f.classList.remove('invalid')});
+
+  // ===== CARROSSEL DE CLIENTES (marquee infinito) =====
+  (function(){
+    const mq=document.querySelector('.marquee');
+    if(!mq)return;
+    if(matchMedia('(prefers-reduced-motion: reduce)').matches)return; // CSS deixa estático e centralizado
+    const track=mq.querySelector('.marquee-track');
+    const group=track.querySelector('.marquee-group');
+    if(!track||!group)return;
+    const base=[...group.children].map(c=>c.cloneNode(true));
+    // preenche o grupo até ultrapassar a largura visível (sem deixar buraco no loop)
+    let guard=0;
+    while(group.scrollWidth<mq.offsetWidth*1.2&&guard<20){base.forEach(c=>group.appendChild(c.cloneNode(true)));guard++;}
+    // duplica o grupo inteiro: garante loop perfeito com translateX(-50%)
+    const clone=group.cloneNode(true);
+    clone.setAttribute('aria-hidden','true');
+    track.appendChild(clone);
+    // velocidade constante (~72px/s) independente da quantidade de logos
+    track.style.animationDuration=Math.max(18,Math.round(group.scrollWidth/72))+'s';
+  })();
 </script>
 </body>
 </html>
