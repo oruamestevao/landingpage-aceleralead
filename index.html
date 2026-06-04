@@ -314,6 +314,31 @@
   .plan-feat{border:1px solid rgba(0,120,240,.28);box-shadow:0 30px 70px -28px rgba(0,120,240,.45),inset 0 1px 0 rgba(255,255,255,.7);transform:translateY(-6px)}
   .plan-premise{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:34px}
   .lf-plano-pill{display:inline-flex;align-items:center;gap:8px;background:rgba(0,120,240,.08);border:1px solid rgba(0,120,240,.2);color:var(--primary-deep);font-size:13px;font-weight:700;padding:7px 14px;border-radius:99px;margin:-8px 0 18px}
+
+  /* ===== CLIENTES (carrossel infinito) ===== */
+  #clientes{position:relative;padding:62px 0 56px;overflow:hidden}
+  #clientes::before{content:"";position:absolute;left:50%;top:50%;width:min(900px,90%);height:240px;transform:translate(-50%,-50%);background:radial-gradient(ellipse at center,rgba(0,120,240,.10),transparent 70%);pointer-events:none}
+  .clients-head{text-align:center;margin-bottom:30px;position:relative}
+  .clients-sub{color:var(--ink-2);font-size:15.5px;max-width:560px;margin:10px auto 0;line-height:1.5}
+  .marquee{position:relative;width:100%;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 11%,#000 89%,transparent);mask-image:linear-gradient(90deg,transparent,#000 11%,#000 89%,transparent)}
+  .marquee-track{display:flex;width:max-content;will-change:transform;animation:marquee 36s linear infinite}
+  .marquee:hover .marquee-track{animation-play-state:paused}
+  .marquee-group{display:flex;flex:none}
+  .logo-chip{flex:none;display:grid;place-items:center;height:86px;min-width:178px;margin:0 11px;padding:0 30px;border-radius:18px;box-shadow:var(--shadow-sm);transition:transform .3s,box-shadow .3s}
+  .logo-chip.dark{background:#0E141B;border:1px solid rgba(255,255,255,.09)}
+  .logo-chip.light{background:#fff;border:1px solid var(--line)}
+  .logo-chip:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+  .logo-chip img{height:50px;width:auto;max-width:152px;object-fit:contain;display:block}
+  @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  @media(max-width:560px){
+    #clientes{padding:46px 0 40px}
+    .logo-chip{height:70px;min-width:138px;margin:0 7px;padding:0 20px}
+    .logo-chip img{height:40px;max-width:120px}
+  }
+  @media(prefers-reduced-motion:reduce){
+    .marquee{-webkit-mask-image:none;mask-image:none}
+    .marquee-track{animation:none;width:100%;flex-wrap:wrap;justify-content:center;gap:14px 0}
+  }
   @media(max-width:920px){
     .plans{grid-template-columns:1fr;max-width:420px}
     .plan-feat{transform:none}
@@ -391,6 +416,26 @@
       <div class="t"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg> Sem multa</div>
       <div class="t"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg> Sem contrato abusivo</div>
       <div class="t"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg> IA otimizando 24/7</div>
+    </div>
+  </div>
+</section>
+
+<!-- CLIENTES: carrossel infinito -->
+<section id="clientes">
+  <div class="wrap clients-head">
+    <div class="eyebrow reveal">Quem acelera com a gente</div>
+    <p class="clients-sub reveal d1">De negócios locais a operações em escala — empresas de todos os tamanhos já crescem com a Acelera Lead.</p>
+  </div>
+
+  <div class="marquee" aria-label="Empresas que confiam na Acelera Lead">
+    <div class="marquee-track">
+      <div class="marquee-group">
+        <div class="logo-chip dark"><img src="/assets/logos/anaju.png" alt="Anaju" loading="lazy"></div>
+        <div class="logo-chip dark"><img src="/assets/logos/dl-phones.png" alt="DL Phones" loading="lazy"></div>
+        <div class="logo-chip light"><img src="/assets/logos/icaro.png" alt="Ícaro Games & Cell" loading="lazy"></div>
+        <div class="logo-chip dark"><img src="/assets/logos/gr3-cross.png" alt="GR3 Cross" loading="lazy"></div>
+        <div class="logo-chip dark"><img src="/assets/logos/olimpo-gym.png" alt="Olimpo Gym" loading="lazy"></div>
+      </div>
     </div>
   </div>
 </section>
@@ -732,6 +777,26 @@
 
   leadForm.addEventListener('input',e=>{const f=e.target.closest('.field');if(f)f.classList.remove('invalid')});
   leadForm.addEventListener('change',e=>{const f=e.target.closest('.field');if(f)f.classList.remove('invalid')});
+
+  // ===== CARROSSEL DE CLIENTES (marquee infinito) =====
+  (function(){
+    const mq=document.querySelector('.marquee');
+    if(!mq)return;
+    if(matchMedia('(prefers-reduced-motion: reduce)').matches)return; // CSS deixa estático e centralizado
+    const track=mq.querySelector('.marquee-track');
+    const group=track.querySelector('.marquee-group');
+    if(!track||!group)return;
+    const base=[...group.children].map(c=>c.cloneNode(true));
+    // preenche o grupo até ultrapassar a largura visível (sem deixar buraco no loop)
+    let guard=0;
+    while(group.scrollWidth<mq.offsetWidth*1.2&&guard<20){base.forEach(c=>group.appendChild(c.cloneNode(true)));guard++;}
+    // duplica o grupo inteiro: garante loop perfeito com translateX(-50%)
+    const clone=group.cloneNode(true);
+    clone.setAttribute('aria-hidden','true');
+    track.appendChild(clone);
+    // velocidade constante (~72px/s) independente da quantidade de logos
+    track.style.animationDuration=Math.max(18,Math.round(group.scrollWidth/72))+'s';
+  })();
 </script>
 </body>
 </html>
