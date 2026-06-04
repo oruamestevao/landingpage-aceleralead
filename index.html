@@ -292,6 +292,32 @@
     .modal{padding:30px 22px 26px;border-radius:22px}
     .modal-title{font-size:22px}
   }
+
+  /* ===== PLANOS ===== */
+  .plans{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:50px;align-items:stretch;max-width:880px;margin-left:auto;margin-right:auto}
+  .plan{position:relative;display:flex;flex-direction:column;padding:34px 30px 30px}
+  .plan-badge{display:inline-flex;align-items:center;gap:8px;align-self:flex-start;font-size:12.5px;font-weight:800;color:var(--primary);letter-spacing:.07em;text-transform:uppercase;background:rgba(0,120,240,.08);border:1px solid rgba(0,120,240,.18);padding:6px 13px;border-radius:99px}
+  .plan-badge-hot{color:#fff;background:linear-gradient(120deg,var(--primary),var(--primary-deep));border-color:transparent;box-shadow:0 10px 26px -12px rgba(0,120,240,.6)}
+  .plan-badge-hot .dot{width:7px;height:7px;border-radius:99px;background:#fff;box-shadow:0 0 0 4px rgba(255,255,255,.28)}
+  .plan-name{font-size:24px;font-weight:800;margin:16px 0 4px}
+  .plan-price{display:flex;align-items:baseline;gap:4px;margin:6px 0 4px;color:var(--ink)}
+  .plan-price .cur{font-size:22px;font-weight:800;align-self:flex-start;margin-top:8px}
+  .plan-price .val{font-size:clamp(46px,6vw,60px);font-weight:800;line-height:1;font-family:'Bricolage Grotesque',sans-serif}
+  .plan-price .per{font-size:17px;font-weight:700;color:var(--ink-2)}
+  .plan-cancel{font-size:13.5px;font-weight:700;color:var(--wa);margin-bottom:22px}
+  .plan-feats{list-style:none;display:flex;flex-direction:column;gap:14px;margin:0 0 26px;flex:1}
+  .plan-feats li{display:flex;align-items:flex-start;gap:12px;font-size:15.5px;color:var(--ink-2);line-height:1.45}
+  .plan-feats li strong{color:var(--ink);font-weight:800}
+  .plan-feats .ck{width:24px;height:24px;border-radius:7px;background:rgba(34,195,94,.14);border:1px solid rgba(34,195,94,.3);display:grid;place-items:center;flex:none;margin-top:1px}
+  .plan-feats .ck svg{width:14px;height:14px;color:var(--wa)}
+  .plan-cta{width:100%;justify-content:center;margin-top:auto}
+  .plan-feat{border:1px solid rgba(0,120,240,.28);box-shadow:0 30px 70px -28px rgba(0,120,240,.45),inset 0 1px 0 rgba(255,255,255,.7);transform:translateY(-6px)}
+  .plan-premise{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:34px}
+  .lf-plano-pill{display:inline-flex;align-items:center;gap:8px;background:rgba(0,120,240,.08);border:1px solid rgba(0,120,240,.2);color:var(--primary-deep);font-size:13px;font-weight:700;padding:7px 14px;border-radius:99px;margin:-8px 0 18px}
+  @media(max-width:920px){
+    .plans{grid-template-columns:1fr;max-width:420px}
+    .plan-feat{transform:none}
+  }
 </style>
 </head>
 <body>
@@ -305,6 +331,7 @@
       <a href="#como">Como funciona</a>
       <a href="#ia">Plataforma de IA</a>
       <a href="#liberdade">Sem amarras</a>
+      <a href="#planos">Planos</a>
     </nav>
     <a href="#" data-modal-open class="btn btn-primary">Acelerar agora</a>
   </div>
@@ -477,6 +504,55 @@
   </div>
 </section>
 
+<!-- PLANOS -->
+<section class="block" id="planos" style="padding-top:10px">
+  <div class="wrap">
+    <div class="center" style="max-width:760px">
+      <div class="eyebrow reveal">Planos</div>
+      <h2 class="h2 center reveal d1">Planos simples e <span class="grad">diretos.</span></h2>
+      <p class="lead center reveal d1">A diferença entre eles é só o teto de investimento que a gente gerencia. Sem fidelidade, sem multa, sem contrato abusivo.</p>
+    </div>
+
+    <div class="plans">
+      <!-- PLANO 1 — Start -->
+      <div class="plan glass reveal d1">
+        <div class="plan-badge">Plano 1</div>
+        <h3 class="plan-name">Start</h3>
+        <div class="plan-price"><span class="cur">R$</span><span class="val">700</span><span class="per">/mês</span></div>
+        <div class="plan-cancel">Cancele quando quiser</div>
+        <ul class="plan-feats">
+          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg></span>30 dias de gestão de tráfego com IA</li>
+          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg></span>Gerenciamos seu investimento de até <strong>R$ 1.000</strong></li>
+          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg></span>Sem multa, sem fidelidade, sem contrato abusivo</li>
+          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg></span>Pagou, usou</li>
+        </ul>
+        <button type="button" class="btn btn-primary plan-cta" data-modal-open data-plano="Plano 1 — Start (R$ 700/mês)">Começar com o Start</button>
+      </div>
+
+      <!-- PLANO 2 — Pro (destaque) -->
+      <div class="plan plan-feat glass reveal d2">
+        <div class="plan-badge plan-badge-hot"><span class="dot"></span>Plano 2 · Mais popular</div>
+        <h3 class="plan-name">Pro</h3>
+        <div class="plan-price"><span class="cur">R$</span><span class="val">900</span><span class="per">/mês</span></div>
+        <div class="plan-cancel">Cancele quando quiser</div>
+        <ul class="plan-feats">
+          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg></span>30 dias de gestão de tráfego com IA</li>
+          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg></span>Gerenciamos seu investimento de até <strong>R$ 5.000</strong></li>
+          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg></span>Sem multa, sem fidelidade, sem contrato abusivo</li>
+          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg></span>Pagou, usou</li>
+        </ul>
+        <button type="button" class="btn btn-primary plan-cta" data-modal-open data-plano="Plano 2 — Pro (R$ 900/mês)">Quero o Pro</button>
+      </div>
+    </div>
+
+    <div class="plan-premise reveal d2">
+      <span class="pill"><span class="dot"></span>Sem fidelidade</span>
+      <span class="pill"><span class="dot"></span>Sem multa</span>
+      <span class="pill"><span class="dot"></span>Cancele quando quiser</span>
+    </div>
+  </div>
+</section>
+
 <!-- CTA -->
 <section class="block" id="cta" style="padding-top:10px">
   <div class="wrap">
@@ -516,6 +592,7 @@
     </button>
     <h3 id="leadModalTitle" class="modal-title">Vamos acelerar suas vendas</h3>
     <p class="modal-sub">Preencha os dados e fale agora com nosso time no WhatsApp.</p>
+    <div class="lf-plano-pill" id="lf-plano-pill" style="display:none"></div>
     <form id="leadForm" novalidate>
       <div class="field">
         <label for="lf-nome">Nome</label>
@@ -592,9 +669,16 @@
   const modal=document.getElementById('leadModal');
   const leadForm=document.getElementById('leadForm');
   let lastFocus=null;
+  let selectedPlano='';
+  const planoPill=document.getElementById('lf-plano-pill');
 
   function openModal(e){
     if(e)e.preventDefault();
+    selectedPlano=(e&&e.currentTarget&&e.currentTarget.dataset.plano)||'';
+    if(planoPill){
+      planoPill.textContent='Plano escolhido: '+selectedPlano;
+      planoPill.style.display=selectedPlano?'inline-flex':'none';
+    }
     lastFocus=document.activeElement;
     modal.classList.add('open');
     modal.setAttribute('aria-hidden','false');
@@ -606,6 +690,8 @@
     modal.classList.remove('open');
     modal.setAttribute('aria-hidden','true');
     document.body.classList.remove('modal-lock');
+    selectedPlano='';
+    if(planoPill)planoPill.style.display='none';
     if(lastFocus)lastFocus.focus();
   }
 
@@ -631,6 +717,7 @@
     const msg=
       '*Bem-vindo à Acelera Lead!* 🚀\n'+
       'Em breve, um especialista em IA irá falar com você.\n\n'+
+      (selectedPlano?'*Plano escolhido:* '+selectedPlano+'\n':'')+
       '*Nome:* '+d.get('nome').trim()+'\n'+
       '*WhatsApp:* '+d.get('whatsapp').trim()+'\n'+
       '*Empresa:* '+d.get('empresa').trim()+'\n'+
