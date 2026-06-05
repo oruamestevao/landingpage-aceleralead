@@ -347,18 +347,15 @@
   /* ===== PLATAFORMAS (parede de logos) ===== */
   .wall{position:relative;display:flex;justify-content:center;gap:18px;height:clamp(340px,46vw,460px);margin-top:48px;overflow:hidden;-webkit-mask-image:linear-gradient(180deg,transparent,#000 14%,#000 86%,transparent);mask-image:linear-gradient(180deg,transparent,#000 14%,#000 86%,transparent)}
   .wall-col{display:flex;flex-direction:column;flex:none}
-  .wall-col .track{display:flex;flex-direction:column;gap:18px;animation:wallScroll linear infinite;will-change:transform}
+  .wall-col .track{display:flex;flex-direction:column;animation:wallScroll linear infinite;will-change:transform;backface-visibility:hidden}
   .wall-col:nth-child(even) .track{animation-direction:reverse}
-  .wall:hover .track{animation-play-state:paused}
-  .app-tile{width:84px;height:84px;border-radius:20px;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow-sm);display:grid;place-items:center;transition:transform .3s,box-shadow .3s}
-  .app-tile:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+  .app-tile{width:84px;height:84px;margin-bottom:18px;border-radius:20px;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow-sm);display:grid;place-items:center}
   .app-tile img{width:46px;height:46px;object-fit:contain;display:block}
-  @keyframes wallScroll{from{transform:translateY(0)}to{transform:translateY(-50%)}}
+  @keyframes wallScroll{from{transform:translate3d(0,0,0)}to{transform:translate3d(0,-50%,0)}}
   @media(max-width:560px){
     .wall{gap:12px;margin-top:34px}
-    .app-tile{width:64px;height:64px;border-radius:16px}
+    .app-tile{width:64px;height:64px;margin-bottom:12px;border-radius:16px}
     .app-tile img{width:36px;height:36px}
-    .wall-col .track{gap:12px}
   }
   @media(prefers-reduced-motion:reduce){
     .wall{-webkit-mask-image:none;mask-image:none;height:auto;flex-wrap:wrap;justify-content:center}
@@ -883,7 +880,12 @@
       });
     }
     build();
-    let rt;addEventListener('resize',()=>{clearTimeout(rt);rt=setTimeout(()=>{if(!reduce)build();},250);});
+    let rt,lastW=innerWidth;
+    addEventListener('resize',()=>{
+      if(reduce||innerWidth===lastW)return; // ignora resize só de altura (barra do navegador no mobile)
+      lastW=innerWidth;
+      clearTimeout(rt);rt=setTimeout(build,300);
+    });
   })();
 </script>
 </body>
