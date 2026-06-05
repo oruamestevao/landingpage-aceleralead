@@ -343,6 +343,27 @@
     .plans{grid-template-columns:1fr;max-width:420px}
     .plan-feat{transform:none}
   }
+
+  /* ===== PLATAFORMAS (parede de logos) ===== */
+  .wall{position:relative;display:flex;justify-content:center;gap:18px;height:clamp(340px,46vw,460px);margin-top:48px;overflow:hidden;-webkit-mask-image:linear-gradient(180deg,transparent,#000 14%,#000 86%,transparent);mask-image:linear-gradient(180deg,transparent,#000 14%,#000 86%,transparent)}
+  .wall-col{display:flex;flex-direction:column;flex:none}
+  .wall-col .track{display:flex;flex-direction:column;gap:18px;animation:wallScroll linear infinite;will-change:transform}
+  .wall-col:nth-child(even) .track{animation-direction:reverse}
+  .wall:hover .track{animation-play-state:paused}
+  .app-tile{width:84px;height:84px;border-radius:20px;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow-sm);display:grid;place-items:center;transition:transform .3s,box-shadow .3s}
+  .app-tile:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+  .app-tile img{width:46px;height:46px;object-fit:contain;display:block}
+  @keyframes wallScroll{from{transform:translateY(0)}to{transform:translateY(-50%)}}
+  @media(max-width:560px){
+    .wall{gap:12px;margin-top:34px}
+    .app-tile{width:64px;height:64px;border-radius:16px}
+    .app-tile img{width:36px;height:36px}
+    .wall-col .track{gap:12px}
+  }
+  @media(prefers-reduced-motion:reduce){
+    .wall{-webkit-mask-image:none;mask-image:none;height:auto;flex-wrap:wrap;justify-content:center}
+    .wall-col .track{animation:none}
+  }
 </style>
 </head>
 <body>
@@ -546,6 +567,40 @@
       <div class="card glass reveal d2"><div class="badge">Sem multa</div><h3>Saída livre, sempre</h3><p>Mudou de ideia? Cancela e pronto. Sem taxa de rescisão, sem pegadinha no rodapé.</p></div>
       <div class="card glass reveal d3"><div class="badge">Sem abuso</div><h3>Regras claras</h3><p>Termos honestos, em português de gente. Você sabe exatamente o que contrata e o que recebe.</p></div>
     </div>
+  </div>
+</section>
+
+<!-- PLATAFORMAS -->
+<section class="block" id="plataformas" style="padding-top:10px">
+  <div class="wrap">
+    <div class="center" style="max-width:760px">
+      <div class="eyebrow reveal">Onde anunciamos</div>
+      <h2 class="h2 center reveal d1">Tráfego em todas as principais <span class="grad">plataformas.</span></h2>
+      <p class="lead center reveal d1">Sua marca aparece onde seu cliente está — das redes sociais aos marketplaces. A gente cuida da campanha em cada uma.</p>
+    </div>
+  </div>
+
+  <div class="wall reveal d1" id="logoWall" aria-label="Plataformas onde fazemos gestão de tráfego">
+    <ul class="wall-src" hidden>
+      <li><img src="/assets/logos-ads/meta.svg" alt="Meta Ads" loading="lazy"></li>
+      <li><img src="/assets/logos-ads/instagram.svg" alt="Instagram" loading="lazy"></li>
+      <li><img src="/assets/logos-ads/facebook.svg" alt="Facebook" loading="lazy"></li>
+      <li><img src="/assets/logos-ads/google-ads.svg" alt="Google Ads" loading="lazy"></li>
+      <li><img src="/assets/logos-ads/youtube.svg" alt="YouTube" loading="lazy"></li>
+      <li><img src="/assets/logos-ads/tiktok.svg" alt="TikTok" loading="lazy"></li>
+      <li><img src="/assets/logos-ads/kwai.svg" alt="Kwai" loading="lazy"></li>
+      <li><img src="/assets/logos-ads/pinterest.svg" alt="Pinterest" loading="lazy"></li>
+      <li><img src="/assets/logos-ads/x.svg" alt="X (Twitter)" loading="lazy"></li>
+      <li><img src="/assets/logos-ads/linkedin.svg" alt="LinkedIn" loading="lazy"></li>
+      <li><img src="/assets/logos-ads/snapchat.svg" alt="Snapchat" loading="lazy"></li>
+      <li><img src="/assets/logos-ads/whatsapp.svg" alt="WhatsApp" loading="lazy"></li>
+      <li><img src="/assets/logos-ads/telegram.svg" alt="Telegram" loading="lazy"></li>
+      <li><img src="/assets/logos-ads/mercado-livre.png" alt="Mercado Livre" loading="lazy"></li>
+      <li><img src="/assets/logos-ads/shopee.svg" alt="Shopee" loading="lazy"></li>
+      <li><img src="/assets/logos-ads/amazon.svg" alt="Amazon" loading="lazy"></li>
+      <li><img src="/assets/logos-ads/ifood.svg" alt="iFood" loading="lazy"></li>
+      <li><img src="/assets/logos-ads/spotify.svg" alt="Spotify" loading="lazy"></li>
+    </ul>
   </div>
 </section>
 
@@ -796,6 +851,39 @@
     track.appendChild(clone);
     // velocidade constante (~72px/s) independente da quantidade de logos
     track.style.animationDuration=Math.max(18,Math.round(group.scrollWidth/72))+'s';
+  })();
+
+  // ===== PLATAFORMAS: parede de logos (scroll vertical alternado) =====
+  (function(){
+    const wall=document.getElementById('logoWall');
+    if(!wall)return;
+    const src=wall.querySelector('.wall-src');
+    const imgs=src?[...src.querySelectorAll('img')]:[];
+    if(!imgs.length)return;
+    const tile=im=>{const d=document.createElement('div');d.className='app-tile';d.appendChild(im.cloneNode(true));return d;};
+    const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    function build(){
+      wall.querySelectorAll('.wall-col').forEach(c=>c.remove());
+      if(reduce){imgs.forEach(im=>wall.appendChild(tile(im)));return;}
+      const cols=Math.max(3,Math.min(6,Math.round(wall.clientWidth/120)));
+      const buckets=Array.from({length:cols},()=>[]);
+      imgs.forEach((im,i)=>buckets[i%cols].push(im));
+      const wallH=wall.clientHeight;
+      buckets.forEach((bucket,ci)=>{
+        const col=document.createElement('div');col.className='wall-col';
+        const track=document.createElement('div');track.className='track';
+        bucket.forEach(im=>track.appendChild(tile(im)));
+        col.appendChild(track);wall.appendChild(col);
+        let guard=0; // preenche a coluna até passar a altura visível
+        while(track.scrollHeight<wallH*1.15&&guard<14){bucket.forEach(im=>track.appendChild(tile(im)));guard++;}
+        // duplica o conjunto p/ loop perfeito (translateY -50%)
+        [...track.children].forEach(ch=>track.appendChild(ch.cloneNode(true)));
+        track.style.animationDuration=(24+ci*4)+'s'; // velocidades variadas
+      });
+    }
+    build();
+    let rt;addEventListener('resize',()=>{clearTimeout(rt);rt=setTimeout(()=>{if(!reduce)build();},250);});
   })();
 </script>
 </body>
