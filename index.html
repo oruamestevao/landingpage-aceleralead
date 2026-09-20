@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Acelera Lead — 7 dias grátis para testar. Seu WhatsApp cheio de gente pronta pra comprar</title>
-<meta name="description" content="Teste 7 dias grátis: a gente configura e roda seus anúncios com Inteligência Artificial e leva o cliente certo direto para o seu WhatsApp. Sem cartão, sem contrato, sem multa.">
+<title>Acelera Lead — Suba seus anúncios com IA. 7 dias grátis, a partir de R$ 297/mês</title>
+<meta name="description" content="Crie sua conta, conecte seu Instagram e Facebook e coloque campanhas no ar com Inteligência Artificial. 7 dias grátis, planos a partir de R$ 297/mês, sem fidelidade e sem multa.">
 <meta name="theme-color" content="#0078F0">
 <!-- Favicon: bússola Acelera Lead -->
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <!-- Open Graph / prévia de compartilhamento -->
-<meta property="og:title" content="Acelera Lead — 7 dias grátis para testar. Seu WhatsApp cheio de gente pronta pra comprar">
-<meta property="og:description" content="Teste 7 dias grátis: a gente configura e roda seus anúncios com Inteligência Artificial e leva o cliente certo direto para o seu WhatsApp. Sem cartão, sem contrato, sem multa.">
+<meta property="og:title" content="Acelera Lead — Suba seus anúncios com IA. 7 dias grátis, a partir de R$ 297/mês">
+<meta property="og:description" content="Crie sua conta, conecte seu Instagram e Facebook e coloque campanhas no ar com Inteligência Artificial. 7 dias grátis, planos a partir de R$ 297/mês, sem fidelidade e sem multa.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://aceleralead.com">
 <meta property="og:locale" content="pt_BR">
@@ -20,8 +20,8 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Acelera Lead">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Acelera Lead — 7 dias grátis para testar. Seu WhatsApp cheio de gente pronta pra comprar">
-<meta name="twitter:description" content="Teste 7 dias grátis: a gente configura e roda seus anúncios com Inteligência Artificial e leva o cliente certo direto para o seu WhatsApp. Sem cartão, sem contrato, sem multa.">
+<meta name="twitter:title" content="Acelera Lead — Suba seus anúncios com IA. 7 dias grátis, a partir de R$ 297/mês">
+<meta name="twitter:description" content="Crie sua conta, conecte seu Instagram e Facebook e coloque campanhas no ar com Inteligência Artificial. 7 dias grátis, planos a partir de R$ 297/mês, sem fidelidade e sem multa.">
 <meta name="twitter:image" content="https://aceleralead.com/og-image.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -382,6 +382,135 @@
     .modal-title{font-size:22px}
   }
 
+  /* ===== menu mobile ===== */
+  .nav-toggle{display:none;width:42px;height:42px;border-radius:12px;border:1px solid var(--line);background:var(--card);cursor:pointer;place-items:center;gap:4.5px;box-shadow:var(--shadow-sm);flex:none}
+  .nav-toggle span{display:block;width:18px;height:2px;border-radius:2px;background:var(--ink);transition:transform .28s cubic-bezier(.16,1,.3,1),opacity .2s}
+  .nav-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+  .nav-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
+  .nav-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+
+  /* ===== hero: painel da plataforma sobre a conversa ===== */
+  .hero-stack{position:relative;max-width:470px;margin-left:auto}
+  .hero-panel{background:var(--card);border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow);padding:18px 20px 16px;position:relative;z-index:2;margin-bottom:-18px;max-width:400px}
+  .hp-top{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+  .hp-top .hp-title{font-family:var(--display);font-weight:600;font-size:16px;line-height:1.2}
+  .hp-top .hp-live{margin-left:auto;display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--wa-deep);background:var(--wa-soft);border:1px solid rgba(34,195,94,.3);padding:4px 10px;border-radius:99px}
+  .hp-top .hp-live i{width:6px;height:6px;border-radius:99px;background:var(--wa);display:block}
+  .hp-meta{display:flex;align-items:center;gap:8px;padding:10px 12px;border-radius:13px;background:var(--paper-2);border:1px solid var(--line);font-size:13px;font-weight:600;color:var(--ink-2);margin-bottom:12px}
+  .hp-meta img{width:18px;height:18px;object-fit:contain;display:block;flex:none}
+  .hp-meta .hp-ok{margin-left:auto;color:var(--wa-deep);display:grid;place-items:center}
+  .hp-meta .hp-ok svg{width:16px;height:16px}
+  .hp-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:9px}
+  .hp-cell{padding:9px 10px;border-radius:12px;background:var(--primary-soft);border:1px solid var(--primary-brd)}
+  .hp-cell .k{display:block;font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--primary-deep);opacity:.85}
+  .hp-cell .v{display:block;font-family:var(--display);font-weight:600;font-size:17px;color:var(--ink);line-height:1.25;margin-top:2px}
+  .hero-stack .chat{max-width:400px;margin-left:auto;margin-right:0}
+
+  /* ===== planos: medidor de faixa de investimento (assinatura da seção) ===== */
+  .plan-range{padding:14px 16px;border-radius:14px;background:var(--paper-2);border:1px solid var(--line);margin:0 0 20px}
+  .plan-feat .plan-range{background:var(--primary-soft);border-color:var(--primary-brd)}
+  .plan-range .pr-label{display:block;font-size:11px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-2)}
+  .plan-range .pr-val{display:block;font-family:var(--display);font-weight:600;font-size:19px;color:var(--ink);line-height:1.25;margin:4px 0 10px}
+  .plan-range .pr-val span{font-family:var(--body);font-size:13.5px;font-weight:600;color:var(--ink-2)}
+  .pr-meter{display:flex;gap:5px}
+  .pr-meter i{height:6px;flex:1;border-radius:99px;background:rgba(16,27,42,.12)}
+  .pr-meter i.on{background:var(--primary)}
+  .plan-feat .pr-meter i{background:rgba(0,120,240,.18)}
+  .plan-feat .pr-meter i.on{background:var(--primary)}
+
+  /* ===== planos: faixa discreta do Escala ===== */
+  .plan-escala{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-top:22px;padding:20px 26px;border-radius:var(--r);background:var(--primary-soft);border:1px solid var(--primary-brd);cursor:pointer;transition:border-color .25s ease,transform .25s ease,box-shadow .25s ease}
+  .plan-escala:hover{border-color:var(--primary);transform:translateY(-2px);box-shadow:0 16px 36px -22px rgba(0,120,240,.5)}
+  .plan-escala .pe-tag{flex:none;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#fff;background:var(--primary);padding:6px 13px;border-radius:99px}
+  .plan-escala p{flex:1;min-width:240px;font-size:15.5px;color:var(--ink-2);line-height:1.5}
+  .plan-escala p strong{color:var(--ink);font-weight:600}
+  .plan-escala .pe-go{flex:none;display:inline-flex;align-items:center;gap:7px;font-size:15px;font-weight:600;color:var(--primary-deep)}
+  .plan-escala .pe-go svg{width:16px;height:16px;transition:transform .25s ease}
+  .plan-escala:hover .pe-go svg{transform:translateX(3px)}
+
+  /* ===== mentoria ACL: o serviço humano, vendido à parte ===== */
+  .mentoria{position:relative;overflow:hidden;border-radius:30px;padding:56px 48px 48px;color:#fff;
+    background:linear-gradient(150deg,#0A1424,#0F2746 62%,#123c68);box-shadow:0 34px 80px -38px rgba(10,30,60,.65)}
+  .mentoria::before{content:"";position:absolute;inset:0;background:radial-gradient(620px 340px at 84% -14%,rgba(51,153,255,.34),transparent 64%)}
+  .mentoria>*{position:relative;z-index:2}
+  .m-eyebrow{color:var(--primary-glow)}
+  .m-top{display:grid;grid-template-columns:1.25fr .75fr;gap:40px;align-items:center}
+  .mentoria h2{color:#fff;font-size:clamp(28px,3.4vw,42px);max-width:560px}
+  .mentoria h2 em{color:var(--primary-glow)}
+  .m-lead{color:rgba(255,255,255,.78);font-size:17px;margin-top:16px;max-width:520px}
+  .m-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:22px;padding:28px 26px;text-align:center;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+  .m-once{display:inline-flex;font-size:11.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:#0A1424;background:var(--primary-glow);padding:6px 13px;border-radius:99px;margin-bottom:14px}
+  .m-price{font-family:var(--display);font-weight:600;font-size:clamp(44px,5.4vw,56px);line-height:1;color:#fff}
+  .m-price small{font-family:var(--body);font-size:20px;font-weight:600;vertical-align:top;margin-right:3px;opacity:.85}
+  .m-card .m-sub{color:rgba(255,255,255,.76);font-size:14.5px;margin:10px 0 20px}
+  .m-card .m-sub b{color:#fff;font-weight:600}
+  .m-card .btn{width:100%}
+  .m-list{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
+  .m-list li{display:flex;gap:12px;align-items:flex-start;padding:20px 20px;border-radius:16px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);font-size:15px;color:rgba(255,255,255,.82);line-height:1.5}
+  .m-list li b{color:#fff;font-weight:600}
+  .m-list svg{width:20px;height:20px;flex:none;margin-top:2px;color:var(--primary-glow)}
+  .m-bill{margin-top:34px;padding-top:30px;border-top:1px solid rgba(255,255,255,.14)}
+  .m-bill h3{color:#fff;font-size:20px;margin-bottom:20px}
+  .m-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .m-step{padding:20px;border-radius:16px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12)}
+  .m-step .when{display:inline-flex;font-family:var(--display);font-weight:600;font-size:14.5px;color:var(--primary-glow);border:1px solid rgba(51,153,255,.4);background:rgba(51,153,255,.12);padding:4px 12px;border-radius:99px;margin-bottom:12px}
+  .m-step p{color:rgba(255,255,255,.8);font-size:14.5px;line-height:1.5}
+  .m-step p b{color:#fff;font-weight:600}
+  .m-note{margin-top:20px;font-size:13.5px;color:rgba(255,255,255,.6)}
+
+  /* ===== plataformas: legenda do que roda onde ===== */
+  .wall-legend{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-top:26px}
+  .wall-legend span{display:inline-flex;align-items:center;gap:9px;font-size:13.5px;font-weight:600;color:var(--ink-2);background:var(--card);border:1px solid var(--line);padding:9px 16px;border-radius:99px;box-shadow:var(--shadow-sm)}
+  .wall-legend span b{color:var(--ink);font-weight:600}
+  .wall-legend span i{width:8px;height:8px;border-radius:99px;flex:none}
+  .wall-legend .wl-now i{background:var(--primary)}
+  .wall-legend .wl-more i{background:var(--wa)}
+
+  /* ===== responsivo das seções novas ===== */
+  @media(max-width:920px){
+    .nav-toggle{display:grid}
+    .nav-links{display:none;position:absolute;top:calc(100% + 8px);left:16px;right:16px;flex-direction:column;align-items:stretch;gap:0;padding:10px;border-radius:18px;background:var(--card);border:1px solid var(--line);box-shadow:var(--shadow)}
+    .nav-links.open{display:flex}
+    .nav-links a{padding:12px 14px;border-radius:12px;font-size:15.5px;color:var(--ink)}
+    .nav-links a:hover{background:var(--paper-2)}
+    header .nav{position:relative}
+    .hero-stack,.hero-panel,.hero-stack .chat{max-width:430px;margin-left:auto;margin-right:auto}
+    .m-top{grid-template-columns:1fr;gap:28px}
+    .m-list,.m-steps{grid-template-columns:1fr}
+    .mentoria{padding:40px 26px 36px;border-radius:24px}
+    .plan-escala{padding:20px}
+    .plan-escala .pe-go{width:100%}
+  }
+  @media(max-width:560px){
+    .hero-cta{flex-direction:column;align-items:stretch}
+    .hero-cta .btn{width:100%}
+    .plan-escala p{min-width:0}
+    .hp-grid{grid-template-columns:1fr 1fr}
+    .hp-cell:last-child{grid-column:span 2}
+  }
+
+  /* ===== equilíbrio de texto: nenhuma palavra sozinha na última linha ===== */
+  h1,h2,h3,h4,.h2,.plan-name,.pr-val,.m-price,.modal-title{text-wrap:balance}
+  p,li,.lead,.sub,.micro,.under,.micro-cta,.steps-note,.plans-note,.m-note,.m-sub,
+  .stats-src,.modal-sub,.modal-foot,.clients-sub,.plan-for,.wall-legend span,
+  .plan-escala p,.contract-foot p,.stat .l,.trust-row .t{text-wrap:pretty}
+  .m-step .when{font-size:15px}
+
+  /* ===== refinos de mobile: densidade e alvos de toque ===== */
+  @media(max-width:920px){
+    section.block{padding:56px 0}
+    .foot-col a{padding:10px 0;margin-bottom:0}
+    .modal-close{width:42px;height:42px}
+    .steps-note a,.feat a{display:inline-block;padding:3px 0}
+    .nav-toggle{order:3}
+    .mentoria{padding:36px 20px 32px}
+    .m-card{padding:24px 18px}
+    .m-card .btn{padding:14px 16px}
+    .m-list li,.m-step{padding:18px}
+    .m-bill h3{font-size:19px}
+    .trial-note{gap:13px}
+  }
+
   /* ===== movimento reduzido ===== */
   @media(prefers-reduced-motion:reduce){
     html{scroll-behavior:auto}
@@ -401,14 +530,16 @@
 <header id="header">
   <div class="nav">
     <a href="#" aria-label="Acelera Lead — início"><img class="logo" src="/assets/brand/wordmark.webp" alt="Acelera Lead"></a>
-    <nav class="nav-links">
+    <nav class="nav-links" id="navLinks">
       <a href="#como">Como funciona</a>
       <a href="#ia">Plataforma de IA</a>
-      <a href="#teste">Teste grátis</a>
-      <a href="#liberdade">Sem amarras</a>
       <a href="#planos">Planos</a>
+      <a href="#mentoria">Mentoria ACL</a>
     </nav>
-    <a href="#" data-modal-open class="btn btn-primary">Começar grátis</a>
+    <button type="button" class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
+    <a href="#" data-modal-open data-plano-slug="trial" class="btn btn-primary">Criar conta grátis</a>
   </div>
 </header>
 
@@ -416,31 +547,52 @@
 <section class="hero">
   <div class="wrap hero-inner">
     <div>
-      <span class="pill reveal"><span class="dot"></span> 7 dias grátis · sem cartão, sem contrato</span>
-      <h1 class="reveal d1">Seu WhatsApp cheio de gente <em>pronta pra comprar</em>.</h1>
-      <p class="sub reveal d2">A Acelera Lead cria e cuida dos seus anúncios com <b>Inteligência Artificial</b> e leva o cliente certo direto pra sua conversa. Comece com <b>7 dias grátis</b>: a gente configura tudo e roda pra você ver o resultado antes de pagar qualquer coisa.</p>
+      <!-- TODO trial: se o cadastro passar a exigir cartão, trocar "sem cartão" aqui e nos demais pontos marcados -->
+      <span class="pill reveal"><span class="dot"></span> 7 dias grátis · sem compromisso</span>
+      <h1 class="reveal d1">Anuncie você mesmo. Com uma IA <em>que entende de anúncio</em>.</h1>
+      <p class="sub reveal d2">Crie sua conta, conecte seu Instagram e Facebook e coloque campanhas no ar em minutos — sem agência e sem saber anunciar. A IA testa, ajusta e leva o cliente certo direto pra sua conversa. <b>Comece com 7 dias grátis.</b></p>
       <div class="hero-cta reveal d3">
-        <a href="#" data-modal-open class="btn btn-primary">Quero meus 7 dias grátis</a>
-        <a href="#teste" class="btn btn-soft">Como funciona o teste</a>
+        <a href="#" data-modal-open data-plano-slug="trial" class="btn btn-primary">Criar minha conta grátis</a>
+        <a href="#planos" class="btn btn-soft">Ver planos</a>
       </div>
-      <p class="micro reveal d4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg> <span>Você só paga o dinheiro que vai para os anúncios. <b>O nosso trabalho nesses 7 dias é por nossa conta.</b></span></p>
+      <p class="micro reveal d4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg> <span>Planos a partir de <b>R$ 297 por mês</b>. O dinheiro do anúncio é seu e você decide quanto investir.</span></p>
     </div>
 
-    <!-- assinatura: a conversa que a plataforma gera -->
+    <!-- assinatura: a plataforma em cima, a conversa que ela gera embaixo -->
     <div class="reveal d2">
-      <div class="chat" aria-label="Exemplo de conversa gerada pela Acelera Lead no WhatsApp">
-        <div class="chat-head">
-          <img class="chat-avatar" src="/assets/brand/mark.webp" alt="">
-          <div class="who"><strong>Seu negócio</strong><span>online agora</span></div>
-          <span class="ia-tag">IA ativa</span>
+      <div class="hero-stack">
+        <div class="hero-panel" aria-label="Exemplo de campanha criada dentro da plataforma Acelera Lead">
+          <div class="hp-top">
+            <span class="hp-title">Campanha · WhatsApp</span>
+            <span class="hp-live"><i></i> No ar</span>
+          </div>
+          <div class="hp-meta">
+            <img src="/assets/logos-ads/instagram.svg" alt="" aria-hidden="true">
+            <img src="/assets/logos-ads/facebook.svg" alt="" aria-hidden="true">
+            <span>Meta conectada</span>
+            <span class="hp-ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg></span>
+          </div>
+          <div class="hp-grid">
+            <div class="hp-cell"><span class="k">Investindo</span><span class="v">R$ 30/dia</span></div>
+            <div class="hp-cell"><span class="k">Conversas</span><span class="v">18 hoje</span></div>
+            <div class="hp-cell"><span class="k">Custo/conversa</span><span class="v">R$ 4,60</span></div>
+          </div>
         </div>
-        <div class="chat-body">
-          <span class="chat-day">Hoje</span>
-          <div class="msg in b1">Oi! Vi o anúncio de vocês no Instagram 👋<span class="t">14:02</span></div>
-          <div class="msg in b2">Ainda tem horário pra sexta?<span class="t">14:02</span></div>
-          <div class="msg out b3">Tem sim, Ana! Sexta temos 14h e 16h. Qual fica melhor pra você?<span class="t">14:02 <svg viewBox="0 0 18 12" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 6.5L4.5 10 11 2.5"/><path d="M7 6.5L10.5 10 17 2.5"/></svg></span></div>
-          <div class="msg in b4">16h! Como faço pra garantir? 🙌<span class="t">14:03</span></div>
-          <div class="chat-note b5"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg> Cliente veio do anúncio criado pela IA</div>
+
+        <div class="chat" aria-label="Exemplo de conversa gerada pela Acelera Lead no WhatsApp">
+          <div class="chat-head">
+            <img class="chat-avatar" src="/assets/brand/mark.webp" alt="">
+            <div class="who"><strong>Seu negócio</strong><span>online agora</span></div>
+            <span class="ia-tag">IA ativa</span>
+          </div>
+          <div class="chat-body">
+            <span class="chat-day">Hoje</span>
+            <div class="msg in b1">Oi! Vi o anúncio de vocês no Instagram 👋<span class="t">14:02</span></div>
+            <div class="msg in b2">Ainda tem horário pra sexta?<span class="t">14:02</span></div>
+            <div class="msg out b3">Tem sim, Ana! Sexta temos 14h e 16h. Qual fica melhor pra você?<span class="t">14:02 <svg viewBox="0 0 18 12" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 6.5L4.5 10 11 2.5"/><path d="M7 6.5L10.5 10 17 2.5"/></svg></span></div>
+            <div class="msg in b4">16h! Como faço pra garantir? 🙌<span class="t">14:03</span></div>
+            <div class="chat-note b5"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg> Cliente veio da campanha que a IA está cuidando</div>
+          </div>
         </div>
       </div>
     </div>
@@ -450,9 +602,9 @@
   <div class="wrap trust">
     <div class="trust-row reveal">
       <div class="t"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg> 7 dias grátis para testar</div>
-      <div class="t"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg> Sem multa</div>
-      <div class="t"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg> Preço fechado por mês</div>
-      <div class="t"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg> IA cuidando dos anúncios todo dia</div>
+      <div class="t"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg> A partir de R$ 297/mês</div>
+      <div class="t"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg> Sem fidelidade e sem multa</div>
+      <div class="t"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg> Integração oficial com a Meta</div>
     </div>
   </div>
 </section>
@@ -460,7 +612,7 @@
 <!-- CLIENTES: carrossel infinito -->
 <section id="clientes">
   <div class="wrap clients-head">
-    <h2 class="reveal">Negócios como o seu já aceleram com a gente.</h2>
+    <h2 class="reveal">Negócios como o seu já anunciam com a gente.</h2>
     <p class="clients-sub reveal d1">Academia, loja de celular, moda, games — gente que vive de atender bem pelo WhatsApp, igualzinho a você.</p>
   </div>
 
@@ -482,15 +634,15 @@
   <div class="wrap">
     <div class="center" style="max-width:720px">
       <div class="eyebrow reveal">Como funciona</div>
-      <h2 class="h2 center reveal d1">Você conecta. A IA trabalha. <em>O cliente chama.</em></h2>
-      <p class="lead center reveal d2">Você não precisa fazer curso, mexer em planilha nem aprender a anunciar. São três passos e a sua empresa começa a aparecer para quem compra.</p>
+      <h2 class="h2 center reveal d1">Três passos. E o seu anúncio <em>está no ar.</em></h2>
+      <p class="lead center reveal d2">Você não precisa fazer curso, contratar agência nem esperar ninguém. Cria a conta, conecta e a IA assume daí em diante.</p>
     </div>
     <div class="steps">
-      <div class="step reveal d1"><span class="who-says">Você faz uma vez</span><h3>Conecte suas contas</h3><p>Ligamos sua conta de anúncios do Instagram e do Facebook (o Meta Ads) ao seu WhatsApp. Leva poucos minutos e a gente faz junto com você, na tela. Não precisa entender de anúncio.</p></div>
-      <div class="step reveal d2"><span class="who-says">A IA faz todo dia</span><h3>Ela cuida dos anúncios</h3><p>Ela testa, ajusta e coloca o seu dinheiro no anúncio que está trazendo mais conversa boa. O que não dá resultado, ela desliga antes de gastar o seu dinheiro à toa.</p></div>
-      <div class="step reveal d3"><span class="who-says">Você faz sempre</span><h3>Atenda e venda</h3><p>O cliente interessado chega no seu WhatsApp já sabendo o que quer. Aí é a parte que você faz melhor do que ninguém: conversar e fechar a venda.</p></div>
+      <div class="step reveal d1"><span class="who-says">Você, em 2 minutos</span><h3>Crie sua conta</h3><p>Cadastro na hora, direto no site, sem passar por vendedor. Você entra na plataforma e já começa a montar a primeira campanha.</p></div>
+      <div class="step reveal d2"><span class="who-says">Você, uma vez só</span><h3>Conecte Instagram e Facebook</h3><p>A conexão é a oficial da Meta, feita dentro do próprio Facebook. Você não entrega senha e a conta de anúncios continua no seu nome.</p></div>
+      <div class="step reveal d3"><span class="who-says">A IA, todo dia</span><h3>A IA sobe e cuida dos anúncios</h3><p>Ela monta o anúncio, testa, coloca mais dinheiro no que está vendendo e desliga o que só gasta. Você acompanha pelo celular e atende quem chega no WhatsApp.</p></div>
     </div>
-    <p class="steps-note reveal d3">É isso. <b>Não tem passo escondido</b> — o resto é a IA trabalhando por você, todo dia.</p>
+    <p class="steps-note reveal d3">É isso. <b>Não tem passo escondido.</b> E se você preferir não fazer sozinho, tem a <a href="#mentoria" style="color:var(--primary-deep);font-weight:600;text-decoration:underline;text-underline-offset:3px">Mentoria ACL</a>.</p>
   </div>
 </section>
 
@@ -499,14 +651,14 @@
   <div class="wrap">
     <div class="center" style="max-width:720px">
       <div class="eyebrow reveal">No que somos bons</div>
-      <h2 class="h2 center reveal d1">A gente é feito para quem vende <em>conversando</em>.</h2>
-      <p class="lead center reveal d2">A gente não faz de tudo um pouco. Faz duas coisas, e faz muito bem feito.</p>
+      <h2 class="h2 center reveal d1">Feito para quem vende <em>conversando</em>.</h2>
+      <p class="lead center reveal d2">A plataforma não faz de tudo um pouco. Faz dois tipos de campanha, e faz muito bem feito.</p>
     </div>
     <div class="focus-grid">
       <div class="focus wa reveal d1">
         <div class="ic"><svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.2-1.8-.9-2-1s-.5-.2-.7.1-.8 1-.9 1.2-.3.2-.6.1a8 8 0 0 1-2.4-1.5 9 9 0 0 1-1.6-2c-.2-.3 0-.5.1-.6l.5-.5.3-.5v-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4a3.4 3.4 0 0 0-1 2.5 5.8 5.8 0 0 0 1.2 3.1 13.3 13.3 0 0 0 5.1 4.5c2.6 1 2.6.7 3 .7a2.9 2.9 0 0 0 1.9-1.3 2.4 2.4 0 0 0 .2-1.3c-.1-.1-.3-.2-.6-.4zM12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.3A10 10 0 1 0 12 2z"/></svg></div>
         <h3>Campanhas de WhatsApp</h3>
-        <p>A pessoa vê seu anúncio e cai direto na sua conversa do WhatsApp. A IA aprende com cada mensagem e traz cada vez mais gente que quer comprar de verdade — não curioso passando o tempo.</p>
+        <p>A pessoa vê seu anúncio e cai direto na sua conversa do WhatsApp. A IA aprende com cada campanha e traz cada vez mais gente que quer comprar de verdade — não curioso passando o tempo.</p>
       </div>
       <div class="focus sell reveal d2">
         <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 3h2l.4 2M7 13h10l3-8H6.4M7 13L5.4 5M7 13l-2 4h12"/><circle cx="9" cy="20" r="1.4"/><circle cx="17" cy="20" r="1.4"/></svg></div>
@@ -528,11 +680,11 @@
     <div class="feat-grid">
       <div class="feat big reveal d1">
         <div class="q">“Quem cuida disso tudo enquanto eu toco o negócio?”</div>
-        <p>A IA cuida. Ela olha seus anúncios <b>24 horas por dia</b>, coloca mais dinheiro no que está vendendo e desliga na hora o que está só gastando. Nenhuma pessoa consegue ajustar tão rápido. Você acompanha tudo pelo celular, sem precisar mexer em nada.</p>
+        <p>A IA cuida. Ela olha suas campanhas <b>24 horas por dia</b>, coloca mais dinheiro no que está vendendo e desliga na hora o que está só gastando. Nenhuma pessoa consegue ajustar tão rápido. Você acompanha tudo pelo celular, sem precisar mexer em nada.</p>
       </div>
       <div class="feat reveal d2">
         <div class="q">“Qual anúncio traz mais cliente?”</div>
-        <p>Pergunte com as suas palavras, como perguntaria a um sócio. A IA olha seus anúncios e <b>responde na hora</b>.</p>
+        <p>Pergunte com as suas palavras, dentro da plataforma. A IA olha suas campanhas e <b>responde na hora</b>.</p>
       </div>
       <div class="feat reveal d1">
         <div class="q">“Com quem eu falo primeiro?”</div>
@@ -543,8 +695,8 @@
         <p>Uma tela simples mostra quanto você gastou, quanto custou cada conversa e quantas vendas saíram. <b>Sem planilha e sem achismo.</b></p>
       </div>
       <div class="feat reveal d3">
-        <div class="q">“E isso é IA de verdade?”</div>
-        <p>De ponta a ponta. Toda decisão sobre o seu dinheiro sai de <b>tecnologia medindo resultado</b> — não de palpite de reunião.</p>
+        <div class="q">“E se eu não quiser fazer sozinho?”</div>
+        <p>Tem a <b>Mentoria ACL</b>: um especialista cria e cuida das campanhas por você durante três meses. <a href="#mentoria" style="color:var(--primary-deep);font-weight:600;text-decoration:underline;text-underline-offset:3px">Ver como funciona</a>.</p>
       </div>
     </div>
   </div>
@@ -555,17 +707,17 @@
   <div class="wrap">
     <div class="center" style="max-width:740px">
       <div class="eyebrow reveal">Sem amarras</div>
-      <h2 class="h2 center reveal d1">Não somos agência. E o nosso contrato <em>comprova</em>.</h2>
+      <h2 class="h2 center reveal d1">É software, não contrato de <em>agência</em>.</h2>
       <p class="lead center reveal d2">Quem já ficou preso em contrato de agência sabe o quanto isso importa. Aqui está, às claras, o que você assina — e o que você nunca vai assinar com a gente.</p>
     </div>
     <div class="contract reveal d2">
       <div class="col yes">
         <h3>O que você encontra aqui</h3>
         <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg> 7 dias grátis antes de pagar qualquer coisa</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg> Preço fechado por mês, combinado antes</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg> Cancelamento quando você quiser, direto com a gente</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg> Tudo escrito em português que dá para entender</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg> 7 dias grátis antes de assinar qualquer plano</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg> A conta de anúncios é sua, com todos os seus dados</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg> Cancele quando quiser, sem ligar para ninguém</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg> Preço fechado por mês, escrito antes de você pagar</li>
         </ul>
       </div>
       <div class="col no">
@@ -573,13 +725,13 @@
         <ul>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M6 6l12 12M18 6L6 18"/></svg> Fidelidade de 12 meses</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M6 6l12 12M18 6L6 18"/></svg> Multa de cancelamento</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M6 6l12 12M18 6L6 18"/></svg> Taxa surpresa aparecendo no boleto</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M6 6l12 12M18 6L6 18"/></svg> Letra miúda escondida no rodapé</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M6 6l12 12M18 6L6 18"/></svg> Taxa de setup ou de entrada</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M6 6l12 12M18 6L6 18"/></svg> Comissão sobre o que você investe em anúncios</li>
         </ul>
       </div>
       <div class="contract-foot">
         <p><b>Você fica porque funciona</b> — não porque o contrato obriga.</p>
-        <a href="#teste" class="btn btn-soft">Ver como testar grátis</a>
+        <a href="#planos" class="btn btn-soft">Ver os planos</a>
       </div>
     </div>
   </div>
@@ -592,8 +744,8 @@
       <div class="stats-inner">
         <div class="stat"><div class="n" data-count="312" data-suffix="%">0%</div><div class="l">mais conversas no WhatsApp</div></div>
         <div class="stat"><div class="n" data-count="47" data-prefix="−" data-suffix="%">0%</div><div class="l">de queda no custo de cada conversa</div></div>
-        <div class="stat"><div class="n" data-count="24" data-suffix="h">0</div><div class="l">por dia de IA cuidando dos anúncios</div></div>
-        <div class="stat"><div class="n" data-count="0" data-prefix="R$ ">R$ 0</div><div class="l">de multa para cancelar</div></div>
+        <div class="stat"><div class="n" data-count="24" data-suffix="h">0</div><div class="l">por dia de IA cuidando das campanhas</div></div>
+        <div class="stat"><div class="n" data-count="297" data-prefix="R$ ">R$ 0</div><div class="l">por mês para começar, no plano Basic</div></div>
       </div>
       <p class="stats-src">Médias apuradas entre clientes da Acelera Lead. Os resultados mudam conforme o segmento, a região e o valor investido em anúncios.</p>
     </div>
@@ -604,9 +756,13 @@
 <section class="block" id="plataformas" style="padding-top:0">
   <div class="wrap">
     <div class="center" style="max-width:760px">
-      <div class="eyebrow reveal">Onde anunciamos</div>
+      <div class="eyebrow reveal">Onde seus anúncios aparecem</div>
       <h2 class="h2 center reveal d1">Sua marca aparece onde <em>seu cliente</em> está.</h2>
-      <p class="lead center reveal d1">Das redes sociais aos sites de venda, como Mercado Livre, Shopee e iFood — a gente cuida do anúncio em cada um deles.</p>
+      <p class="lead center reveal d1">Na plataforma, você sobe campanhas para Instagram, Facebook e WhatsApp com a integração oficial da Meta. As demais — Google, TikTok, Mercado Livre, iFood — a gente cuida com você na Mentoria ACL ou no plano Escala.</p>
+    </div>
+    <div class="wall-legend reveal d2">
+      <span class="wl-now"><i></i> <b>Na plataforma, sozinho:</b> Instagram, Facebook e WhatsApp</span>
+      <span class="wl-more"><i></i> <b>Com Mentoria ACL ou Escala:</b> as demais plataformas</span>
     </div>
   </div>
 
@@ -640,14 +796,14 @@
     <div class="center" style="max-width:760px">
       <div class="eyebrow reveal">Teste grátis</div>
       <h2 class="h2 center reveal d1">Sete dias para ver funcionando. <em>Depois você decide.</em></h2>
-      <p class="lead center reveal d2">A gente configura os seus anúncios e roda por 7 dias sem cobrar nada pela gestão. Você vê o resultado acontecendo no seu WhatsApp antes de assinar qualquer plano.</p>
+      <p class="lead center reveal d2">Você cria a conta, conecta e coloca o anúncio no ar. Por 7 dias a plataforma é sua sem pagar nada — dá tempo de ver o resultado chegando no WhatsApp.</p>
     </div>
 
     <div class="trial-days">
       <div class="day reveal d1">
         <span class="tag">Dia 1</span>
-        <h3>A gente configura</h3>
-        <p>Criamos as suas primeiras campanhas junto com você, na tela, e colocamos no ar. Você não precisa saber nada de anúncio nem mexer em nada.</p>
+        <h3>Você cria e conecta</h3>
+        <p>Cadastro em minutos e a conexão oficial com o Instagram e o Facebook. A IA monta a sua primeira campanha com você e coloca no ar.</p>
       </div>
       <div class="day reveal d2">
         <span class="tag">Do dia 1 ao 7</span>
@@ -656,8 +812,8 @@
       </div>
       <div class="day last reveal d3">
         <span class="tag">Dia 8</span>
-        <h3>Você decide</h3>
-        <p>Gostou do resultado, escolhe um plano e a gente segue. Não gostou, a gente para as campanhas e você não paga nada para a Acelera Lead.</p>
+        <h3>Você escolhe o plano</h3>
+        <p>Gostou, escolhe entre Basic, Standard e Premium e segue. Não gostou, é só cancelar — você não paga nada pela plataforma.</p>
       </div>
     </div>
 
@@ -665,13 +821,14 @@
       <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 7.6v.6"/></svg></span>
       <div>
         <h4>O que é grátis e o que não é — sem enrolação</h4>
-        <p><b>Grátis é o nosso trabalho:</b> criar, cuidar e melhorar as campanhas durante os 7 dias. <b>O dinheiro do anúncio é seu e você escolhe quanto quer investir</b> — pode ser R$ 10, R$ 100 ou R$ 500 por dia. Esse valor você paga direto ao Instagram, ao Facebook ou ao Google, e ele nunca passa pela conta da Acelera Lead.</p>
+        <p><b>Grátis é a plataforma:</b> criar, subir e cuidar das campanhas com IA durante os 7 dias. <b>O dinheiro do anúncio é seu e você escolhe quanto investir</b> — de R$ 10 a R$ 100 por dia, se quiser. Esse valor vai direto para o Instagram, o Facebook ou o Google, e nunca passa pela conta da Acelera Lead.</p>
       </div>
     </div>
 
     <div class="trial-cta reveal d3">
-      <a href="#" data-modal-open class="btn btn-primary" data-plano="Teste grátis de 7 dias">Quero meus 7 dias grátis</a>
-      <p class="under">Sem cartão, sem contrato, sem pagamento antecipado. É só chamar no WhatsApp.</p>
+      <!-- TODO trial: revisar a microcopy abaixo se o cadastro passar a exigir cartão -->
+      <a href="#" data-modal-open data-plano-slug="trial" class="btn btn-primary" data-plano="Teste grátis de 7 dias">Criar minha conta grátis</a>
+      <p class="under">Grátis por 7 dias. Cancele quando quiser.</p>
     </div>
   </div>
 </section>
@@ -681,64 +838,132 @@
   <div class="wrap">
     <div class="center" style="max-width:760px">
       <div class="eyebrow reveal">Planos</div>
-      <h2 class="h2 center reveal d1">Se você gostar, o preço é este. <em>Zero surpresa.</em></h2>
-      <p class="lead center reveal d1">Primeiro você testa 7 dias de graça. Só depois escolhe um plano — e a única diferença entre eles é quanto você investe em anúncios por mês.</p>
+      <h2 class="h2 center reveal d1">Escolha pelo quanto você investe <em>em anúncios</em>.</h2>
+      <p class="lead center reveal d1">A plataforma é a mesma nos três planos: IA cuidando das campanhas, integração com a Meta e campanhas ilimitadas. O que muda é a faixa de investimento que cada um cobre.</p>
     </div>
 
     <div class="plans">
-      <!-- PLANO 1 — Start -->
+      <!-- BASIC -->
       <div class="plan reveal d1">
-        <div class="plan-badge">Plano Start</div>
-        <h3 class="plan-name">Start</h3>
+        <div class="plan-badge">Basic</div>
+        <h3 class="plan-name">Basic</h3>
         <p class="plan-for">Para quem está começando a anunciar.</p>
-        <div class="plan-price"><span class="cur">R$</span><span class="val">700</span><span class="per">/mês</span></div>
+        <div class="plan-price"><span class="cur">R$</span><span class="val">297</span><span class="per">/mês</span></div>
         <div class="plan-cancel">Cancele quando quiser</div>
         <span class="plan-trial"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>Começa com 7 dias grátis</span>
+        <div class="plan-range">
+          <span class="pr-label">Investimento em anúncios</span>
+          <span class="pr-val">até R$ 500 <span>por mês</span></span>
+          <div class="pr-meter" aria-hidden="true"><i class="on"></i><i></i><i></i></div>
+        </div>
         <ul class="plan-feats">
-          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg></span><span>Para quem investe até <strong>R$ 1.000 por mês</strong> em anúncios</span></li>
-          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg></span><span>Gestão dos seus anúncios com IA, todos os dias do mês</span></li>
-          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg></span><span>Sem multa, sem fidelidade, sem letra miúda</span></li>
-          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg></span><span>Sem taxa de entrada e sem custo para configurar</span></li>
+          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg></span><span>A IA cuidando das suas campanhas todo dia</span></li>
+          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg></span><span>Integração oficial com <strong>Instagram e Facebook</strong></span></li>
+          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg></span><span>Campanhas de WhatsApp e de venda, sem limite</span></li>
+          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg></span><span>Sem fidelidade, multa ou taxa de setup</span></li>
         </ul>
-        <button type="button" class="btn btn-primary plan-cta" data-modal-open data-plano="Plano 1 — Start (R$ 700/mês)">Testar grátis e ver o Start</button>
+        <button type="button" class="btn btn-primary plan-cta" data-modal-open data-plano-slug="basic" data-plano="Plano Basic (R$ 297/mês)">Começar grátis</button>
       </div>
 
-      <!-- PLANO 2 — Pro (destaque) -->
+      <!-- STANDARD (destaque) -->
       <div class="plan plan-feat reveal d2">
         <div class="plan-badge plan-badge-hot"><span class="dot"></span>Mais escolhido</div>
-        <h3 class="plan-name">Pro</h3>
-        <p class="plan-for">Para quem já investe e quer render mais.</p>
-        <div class="plan-price"><span class="cur">R$</span><span class="val">900</span><span class="per">/mês</span></div>
+        <h3 class="plan-name">Standard</h3>
+        <p class="plan-for">Para quem já anuncia e quer constância.</p>
+        <div class="plan-price"><span class="cur">R$</span><span class="val">697</span><span class="per">/mês</span></div>
         <div class="plan-cancel">Cancele quando quiser</div>
         <span class="plan-trial"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>Começa com 7 dias grátis</span>
+        <div class="plan-range">
+          <span class="pr-label">Investimento em anúncios</span>
+          <span class="pr-val">até R$ 1.000 <span>por mês</span></span>
+          <div class="pr-meter" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i></div>
+        </div>
         <ul class="plan-feats">
-          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg></span><span>Para quem investe de <strong>R$ 1.000 a R$ 5.000 por mês</strong> em anúncios</span></li>
-          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg></span><span>Gestão dos seus anúncios com IA, todos os dias do mês</span></li>
-          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg></span><span>Sem multa, sem fidelidade, sem letra miúda</span></li>
-          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg></span><span>Sem taxa de entrada e sem custo para configurar</span></li>
+          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg></span><span>A IA cuidando das suas campanhas todo dia</span></li>
+          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg></span><span>Integração oficial com <strong>Instagram e Facebook</strong></span></li>
+          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg></span><span>Campanhas de WhatsApp e de venda, sem limite</span></li>
+          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg></span><span>Sem fidelidade, multa ou taxa de setup</span></li>
         </ul>
-        <button type="button" class="btn btn-primary plan-cta" data-modal-open data-plano="Plano 2 — Pro (R$ 900/mês)">Testar grátis e ver o Pro</button>
+        <button type="button" class="btn btn-primary plan-cta" data-modal-open data-plano-slug="standard" data-plano="Plano Standard (R$ 697/mês)">Começar grátis</button>
       </div>
 
-      <!-- PLANO 3 — Escala -->
+      <!-- PREMIUM -->
       <div class="plan reveal d3">
-        <div class="plan-badge">Plano Escala</div>
-        <h3 class="plan-name">Escala</h3>
-        <p class="plan-for">Para quem investe alto e quer crescer mais.</p>
-        <div class="plan-price"><span class="custom">Sob medida</span></div>
+        <div class="plan-badge">Premium</div>
+        <h3 class="plan-name">Premium</h3>
+        <p class="plan-for">Para quem investe firme e quer escalar.</p>
+        <div class="plan-price"><span class="cur">R$</span><span class="val">899</span><span class="per">/mês</span></div>
         <div class="plan-cancel">Cancele quando quiser</div>
         <span class="plan-trial"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>Começa com 7 dias grátis</span>
+        <div class="plan-range">
+          <span class="pr-label">Investimento em anúncios</span>
+          <span class="pr-val">R$ 1.000 a R$ 5.000 <span>por mês</span></span>
+          <div class="pr-meter" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></div>
+        </div>
         <ul class="plan-feats">
-          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg></span><span>Para quem investe <strong>acima de R$ 5.000 por mês</strong> em anúncios</span></li>
-          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg></span><span>Gestão dos seus anúncios com IA, todos os dias do mês</span></li>
-          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg></span><span>Preço combinado conforme o tamanho da sua operação</span></li>
-          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg></span><span>Sem multa, sem fidelidade, sem letra miúda</span></li>
+          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg></span><span>A IA cuidando das suas campanhas todo dia</span></li>
+          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg></span><span>Integração oficial com <strong>Instagram e Facebook</strong></span></li>
+          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg></span><span>Campanhas de WhatsApp e de venda, sem limite</span></li>
+          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg></span><span>Sem fidelidade, multa ou taxa de setup</span></li>
         </ul>
-        <button type="button" class="btn btn-soft plan-cta" data-modal-open data-plano="Plano 3 — Escala (sob medida)">Falar sobre o Escala</button>
+        <button type="button" class="btn btn-primary plan-cta" data-modal-open data-plano-slug="premium" data-plano="Plano Premium (R$ 899/mês)">Começar grátis</button>
       </div>
     </div>
 
-    <p class="plans-note reveal d2">Não sabe qual escolher? <b>Não precisa decidir agora.</b> Faça os 7 dias grátis e a gente indica o plano certo pelo valor que você investiu.</p>
+    <!-- ESCALA: sob medida, sem virar um quarto card -->
+    <div class="plan-escala reveal d2" role="button" tabindex="0" data-modal-open data-plano-slug="escala" data-plano="Plano Escala (sob medida)">
+      <span class="pe-tag">Plano Escala</span>
+      <p><strong>Investe mais de R$ 5.000 por mês em anúncios?</strong> O Escala é montado sob medida para o tamanho da sua operação.</p>
+      <span class="pe-go">Falar sobre o Escala <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h13M12 5l7 7-7 7"/></svg></span>
+    </div>
+
+    <p class="plans-note reveal d2">Começou no Basic e passou dos R$ 500? <b>Você troca de plano quando quiser</b>, sem taxa nenhuma.</p>
+  </div>
+</section>
+
+<!-- MENTORIA ACL: o acompanhamento humano, vendido à parte -->
+<section class="block" id="mentoria" style="padding-top:0">
+  <div class="wrap">
+    <div class="mentoria reveal">
+      <div class="m-top">
+        <div>
+          <div class="eyebrow m-eyebrow">Opcional · vendido à parte</div>
+          <h2>Não quer subir os anúncios sozinho? <em>Um especialista faz por você.</em></h2>
+          <p class="m-lead">É para quem prefere entregar o volante. Um gestor de tráfego da Acelera Lead cria, sobe e cuida das suas campanhas dentro da sua conta, por três meses.</p>
+        </div>
+        <div class="m-card">
+          <span class="m-once">Pagamento único</span>
+          <div class="m-price"><small>R$</small>499</div>
+          <p class="m-sub">Uma vez só, com <b>3 meses de acompanhamento</b>.</p>
+          <button type="button" class="btn btn-primary" data-modal-open data-plano-slug="mentoria" data-plano="Mentoria ACL (R$ 499, pagamento único)">Quero a Mentoria ACL</button>
+        </div>
+      </div>
+
+      <ul class="m-list">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg><span>Um <b>gestor de tráfego especialista</b> cria e cuida das suas campanhas</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg><span><b>Três meses de acompanhamento</b>, do primeiro anúncio ao ajuste fino</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg><span>A conta, as campanhas e os dados <b>continuam seus</b></span></li>
+      </ul>
+
+      <div class="m-bill">
+        <h3>Como fica a sua conta, mês a mês</h3>
+        <div class="m-steps">
+          <div class="m-step">
+            <span class="when">1º mês</span>
+            <p>Mensalidade do plano <b>+ R$ 499 da mentoria</b>, pagos uma única vez, + o que você investir em anúncios.</p>
+          </div>
+          <div class="m-step">
+            <span class="when">2º e 3º mês</span>
+            <p>Só a mensalidade do plano + anúncios. <b>A mentoria continua rodando, sem cobrar de novo.</b></p>
+          </div>
+          <div class="m-step">
+            <span class="when">A partir do 4º mês</span>
+            <p>Só a mensalidade do plano + anúncios. Você segue na plataforma, com tudo já montado.</p>
+          </div>
+        </div>
+        <p class="m-note">Exemplo com o Standard: R$ 697 + R$ 499 no primeiro mês; R$ 697 por mês daí em diante. O investimento em anúncios é sempre à parte.</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -748,10 +973,10 @@
     <div class="cta reveal">
       <div class="inner">
         <div class="cta-compass"><span class="glow"></span><span class="needle" id="ctaNeedle"><img src="/assets/brand/mark.webp" alt="Bússola Acelera Lead"></span></div>
-        <h2>Sete dias para ver clientes chegando <em>no seu WhatsApp.</em></h2>
-        <p>Fale com a gente hoje e a IA já começa a cuidar dos seus anúncios esta semana. Se não gostar, é só parar — você não paga nada pela gestão desses 7 dias.</p>
-        <a href="#" data-modal-open class="btn btn-primary" style="padding:16px 32px;font-size:16.5px" data-plano="Teste grátis de 7 dias">Começar meus 7 dias grátis</a>
-        <p class="micro-cta">Sem cartão e sem contrato. Você fala com gente de verdade, na hora.</p>
+        <h2>Sua primeira campanha pode estar no ar <em>hoje.</em></h2>
+        <p>Crie sua conta, conecte seu Instagram e deixe a IA cuidar do resto. São sete dias grátis para ver clientes chegando no seu WhatsApp antes de escolher um plano.</p>
+        <a href="#" data-modal-open class="btn btn-primary" style="padding:16px 32px;font-size:16.5px" data-plano-slug="trial" data-plano="Teste grátis de 7 dias">Criar minha conta grátis</a>
+        <p class="micro-cta">Grátis por 7 dias · a partir de R$ 297/mês · cancele quando quiser.</p>
       </div>
     </div>
   </div>
@@ -763,11 +988,11 @@
     <div class="foot-top">
       <div class="foot-brand">
         <img src="/assets/brand/wordmark.webp" alt="Acelera Lead">
-        <p>A gente cria e cuida dos seus anúncios com Inteligência Artificial para levar clientes direto ao seu WhatsApp. Comece com 7 dias grátis, sem amarras.</p>
+        <p>A plataforma de Inteligência Artificial que sobe e cuida dos seus anúncios e leva clientes direto para o seu WhatsApp. Comece com 7 dias grátis, sem amarras.</p>
       </div>
       <div class="foot-cols">
         <div class="foot-col"><h4>Plataforma</h4><a href="#como">Como funciona</a><a href="#ia">Plataforma de IA</a><a href="#teste">Teste grátis</a><a href="#planos">Planos</a></div>
-        <div class="foot-col"><h4>Empresa</h4><a href="#liberdade">Sem amarras</a><a href="#" data-modal-open>Contato</a></div>
+        <div class="foot-col"><h4>Empresa</h4><a href="#mentoria">Mentoria ACL</a><a href="#liberdade">Sem amarras</a><a href="#" data-modal-open data-keep-modal data-plano-slug="contato" data-plano="Contato">Contato</a></div>
       </div>
     </div>
     <div class="foot-bot"><span>© 2026 Acelera Lead. Todos os direitos reservados.</span><span>Feito com IA, sem letra miúda.</span></div>
@@ -780,8 +1005,8 @@
     <button type="button" class="modal-close" id="leadModalClose" aria-label="Fechar">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
     </button>
-    <h3 id="leadModalTitle" class="modal-title">Comece seus 7 dias grátis</h3>
-    <p class="modal-sub">Conte rapidinho sobre o seu negócio e continue a conversa no nosso WhatsApp. Sem cartão e sem compromisso.</p>
+    <h3 id="leadModalTitle" class="modal-title">Crie sua conta grátis</h3>
+    <p class="modal-sub">Conte rapidinho sobre o seu negócio e a gente libera o seu acesso pelo WhatsApp. São 7 dias grátis, sem compromisso.</p>
     <div class="lf-plano-pill" id="lf-plano-pill" style="display:none"></div>
     <form id="leadForm" novalidate>
       <div class="field">
@@ -819,7 +1044,7 @@
         <span class="field-err">Selecione uma opção.</span>
       </div>
       <button type="submit" class="btn btn-primary modal-submit">Continuar no WhatsApp</button>
-      <p class="modal-foot">A gente responde rápido. Sem compromisso.</p>
+      <p class="modal-foot">A gente responde rápido.</p>
     </form>
   </div>
 </div>
@@ -827,6 +1052,20 @@
 <script>
   const header=document.getElementById('header');
   addEventListener('scroll',()=>header.classList.toggle('scrolled',scrollY>20));
+
+  // ===== menu mobile =====
+  (function(){
+    const toggle=document.getElementById('navToggle'),links=document.getElementById('navLinks');
+    if(!toggle||!links)return;
+    const setNav=open=>{
+      links.classList.toggle('open',open);
+      toggle.setAttribute('aria-expanded',String(open));
+      toggle.setAttribute('aria-label',open?'Fechar menu':'Abrir menu');
+    };
+    toggle.addEventListener('click',()=>setNav(!links.classList.contains('open')));
+    links.addEventListener('click',e=>{if(e.target.closest('a'))setNav(false)});
+    addEventListener('keydown',e=>{if(e.key==='Escape')setNav(false)});
+  })();
   const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
   const cio=new IntersectionObserver(es=>es.forEach(e=>{
@@ -885,7 +1124,30 @@
     if(lastFocus)lastFocus.focus();
   }
 
-  document.querySelectorAll('[data-modal-open]').forEach(b=>b.addEventListener('click',openModal));
+  /* ===== destino dos CTAs =====
+     Enquanto o cadastro do app não está no ar, todo CTA abre o modal e a conversa
+     segue no WhatsApp. Quando o app estiver pronto, basta preencher a URL abaixo:
+     os botões passam a levar direto para o signup, já com o plano escolhido.
+     Ex.: 'https://app.aceleralead.com/signup'  ->  .../signup?plano=standard */
+  const APP_SIGNUP_URL='';
+
+  function handleCta(e){
+    // data-keep-modal: links de contato seguem sempre no modal, mesmo com o app no ar
+    if(!APP_SIGNUP_URL||(e.currentTarget&&e.currentTarget.hasAttribute('data-keep-modal')))return openModal(e);
+    e.preventDefault();
+    const slug=(e.currentTarget&&e.currentTarget.dataset.planoSlug)||'trial';
+    location.href=APP_SIGNUP_URL+(APP_SIGNUP_URL.includes('?')?'&':'?')+'plano='+encodeURIComponent(slug);
+  }
+
+  document.querySelectorAll('[data-modal-open]').forEach(b=>{
+    b.addEventListener('click',handleCta);
+    // a faixa do plano Escala é uma div com role="button": precisa responder ao teclado
+    if(b.getAttribute('role')==='button'){
+      b.addEventListener('keydown',ev=>{
+        if(ev.key==='Enter'||ev.key===' '){ev.preventDefault();b.click()}
+      });
+    }
+  });
   document.getElementById('leadModalClose').addEventListener('click',closeModal);
   modal.addEventListener('click',e=>{if(e.target===modal)closeModal()});
   addEventListener('keydown',e=>{if(e.key==='Escape'&&modal.classList.contains('open'))closeModal()});
@@ -905,8 +1167,8 @@
 
     const d=new FormData(leadForm);
     const msg=
-      '*Quero começar meus 7 dias grátis na Acelera Lead!* 🚀\n'+
-      'Em breve, um especialista irá falar com você.\n\n'+
+      '*Quero criar minha conta na Acelera Lead!* 🚀\n'+
+      'Em breve, um especialista libera o seu acesso.\n\n'+
       (selectedPlano?'*Interesse:* '+selectedPlano+'\n':'')+
       '*Nome:* '+d.get('nome').trim()+'\n'+
       '*WhatsApp:* '+d.get('whatsapp').trim()+'\n'+
