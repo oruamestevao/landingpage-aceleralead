@@ -482,9 +482,33 @@
     .plan-escala .pe-go{width:100%}
   }
   @media(max-width:560px){
+    .hero-cta{flex-direction:column;align-items:stretch}
+    .hero-cta .btn{width:100%}
     .plan-escala p{min-width:0}
     .hp-grid{grid-template-columns:1fr 1fr}
     .hp-cell:last-child{grid-column:span 2}
+  }
+
+  /* ===== equilíbrio de texto: nenhuma palavra sozinha na última linha ===== */
+  h1,h2,h3,h4,.h2,.plan-name,.pr-val,.m-price,.modal-title{text-wrap:balance}
+  p,li,.lead,.sub,.micro,.under,.micro-cta,.steps-note,.plans-note,.m-note,.m-sub,
+  .stats-src,.modal-sub,.modal-foot,.clients-sub,.plan-for,.wall-legend span,
+  .plan-escala p,.contract-foot p,.stat .l,.trust-row .t{text-wrap:pretty}
+  .m-step .when{font-size:15px}
+
+  /* ===== refinos de mobile: densidade e alvos de toque ===== */
+  @media(max-width:920px){
+    section.block{padding:56px 0}
+    .foot-col a{padding:10px 0;margin-bottom:0}
+    .modal-close{width:42px;height:42px}
+    .steps-note a,.feat a{display:inline-block;padding:3px 0}
+    .nav-toggle{order:3}
+    .mentoria{padding:36px 20px 32px}
+    .m-card{padding:24px 18px}
+    .m-card .btn{padding:14px 16px}
+    .m-list li,.m-step{padding:18px}
+    .m-bill h3{font-size:19px}
+    .trial-note{gap:13px}
   }
 
   /* ===== movimento reduzido ===== */
@@ -524,9 +548,9 @@
   <div class="wrap hero-inner">
     <div>
       <!-- TODO trial: se o cadastro passar a exigir cartão, trocar "sem cartão" aqui e nos demais pontos marcados -->
-      <span class="pill reveal"><span class="dot"></span> 7 dias grátis · você mesmo coloca no ar</span>
+      <span class="pill reveal"><span class="dot"></span> 7 dias grátis · sem compromisso</span>
       <h1 class="reveal d1">Anuncie você mesmo. Com uma IA <em>que entende de anúncio</em>.</h1>
-      <p class="sub reveal d2">Crie sua conta, conecte seu Instagram e Facebook e coloque campanhas no ar em minutos — sem agência, sem curso e sem saber anunciar. A IA testa, ajusta e leva o cliente certo direto pra sua conversa. <b>Comece com 7 dias grátis.</b></p>
+      <p class="sub reveal d2">Crie sua conta, conecte seu Instagram e Facebook e coloque campanhas no ar em minutos — sem agência e sem saber anunciar. A IA testa, ajusta e leva o cliente certo direto pra sua conversa. <b>Comece com 7 dias grátis.</b></p>
       <div class="hero-cta reveal d3">
         <a href="#" data-modal-open data-plano-slug="trial" class="btn btn-primary">Criar minha conta grátis</a>
         <a href="#planos" class="btn btn-soft">Ver planos</a>
@@ -734,7 +758,7 @@
     <div class="center" style="max-width:760px">
       <div class="eyebrow reveal">Onde seus anúncios aparecem</div>
       <h2 class="h2 center reveal d1">Sua marca aparece onde <em>seu cliente</em> está.</h2>
-      <p class="lead center reveal d1">Na plataforma, você sobe campanhas para Instagram, Facebook e WhatsApp com a integração oficial da Meta. Para as demais plataformas — Google, TikTok, Mercado Livre, iFood e companhia — a gente cuida junto com você na Mentoria ACL ou no plano Escala.</p>
+      <p class="lead center reveal d1">Na plataforma, você sobe campanhas para Instagram, Facebook e WhatsApp com a integração oficial da Meta. As demais — Google, TikTok, Mercado Livre, iFood — a gente cuida com você na Mentoria ACL ou no plano Escala.</p>
     </div>
     <div class="wall-legend reveal d2">
       <span class="wl-now"><i></i> <b>Na plataforma, sozinho:</b> Instagram, Facebook e WhatsApp</span>
@@ -772,7 +796,7 @@
     <div class="center" style="max-width:760px">
       <div class="eyebrow reveal">Teste grátis</div>
       <h2 class="h2 center reveal d1">Sete dias para ver funcionando. <em>Depois você decide.</em></h2>
-      <p class="lead center reveal d2">Você cria a conta, conecta e coloca o anúncio no ar. Por 7 dias a plataforma é sua sem pagar nada — dá tempo de ver o resultado chegando no WhatsApp antes de escolher um plano.</p>
+      <p class="lead center reveal d2">Você cria a conta, conecta e coloca o anúncio no ar. Por 7 dias a plataforma é sua sem pagar nada — dá tempo de ver o resultado chegando no WhatsApp.</p>
     </div>
 
     <div class="trial-days">
@@ -797,14 +821,14 @@
       <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 7.6v.6"/></svg></span>
       <div>
         <h4>O que é grátis e o que não é — sem enrolação</h4>
-        <p><b>Grátis é a plataforma:</b> criar, subir e cuidar das campanhas com IA durante os 7 dias. <b>O dinheiro do anúncio é seu e você escolhe quanto quer investir</b> — pode ser R$ 10, R$ 30 ou R$ 100 por dia. Esse valor você paga direto ao Instagram, ao Facebook ou ao Google, e ele nunca passa pela conta da Acelera Lead.</p>
+        <p><b>Grátis é a plataforma:</b> criar, subir e cuidar das campanhas com IA durante os 7 dias. <b>O dinheiro do anúncio é seu e você escolhe quanto investir</b> — de R$ 10 a R$ 100 por dia, se quiser. Esse valor vai direto para o Instagram, o Facebook ou o Google, e nunca passa pela conta da Acelera Lead.</p>
       </div>
     </div>
 
     <div class="trial-cta reveal d3">
       <!-- TODO trial: revisar a microcopy abaixo se o cadastro passar a exigir cartão -->
       <a href="#" data-modal-open data-plano-slug="trial" class="btn btn-primary" data-plano="Teste grátis de 7 dias">Criar minha conta grátis</a>
-      <p class="under">Grátis por 7 dias. Cancele quando quiser, sem multa.</p>
+      <p class="under">Grátis por 7 dias. Cancele quando quiser.</p>
     </div>
   </div>
 </section>
@@ -833,10 +857,10 @@
           <div class="pr-meter" aria-hidden="true"><i class="on"></i><i></i><i></i></div>
         </div>
         <ul class="plan-feats">
-          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg></span><span>Plataforma completa, com a IA cuidando das campanhas todo dia</span></li>
+          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg></span><span>A IA cuidando das suas campanhas todo dia</span></li>
           <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg></span><span>Integração oficial com <strong>Instagram e Facebook</strong></span></li>
           <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg></span><span>Campanhas de WhatsApp e de venda, sem limite</span></li>
-          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg></span><span>Sem fidelidade, sem multa e sem taxa de setup</span></li>
+          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg></span><span>Sem fidelidade, multa ou taxa de setup</span></li>
         </ul>
         <button type="button" class="btn btn-primary plan-cta" data-modal-open data-plano-slug="basic" data-plano="Plano Basic (R$ 297/mês)">Começar grátis</button>
       </div>
@@ -855,10 +879,10 @@
           <div class="pr-meter" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i></div>
         </div>
         <ul class="plan-feats">
-          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg></span><span>Plataforma completa, com a IA cuidando das campanhas todo dia</span></li>
+          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg></span><span>A IA cuidando das suas campanhas todo dia</span></li>
           <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg></span><span>Integração oficial com <strong>Instagram e Facebook</strong></span></li>
           <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg></span><span>Campanhas de WhatsApp e de venda, sem limite</span></li>
-          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg></span><span>Sem fidelidade, sem multa e sem taxa de setup</span></li>
+          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg></span><span>Sem fidelidade, multa ou taxa de setup</span></li>
         </ul>
         <button type="button" class="btn btn-primary plan-cta" data-modal-open data-plano-slug="standard" data-plano="Plano Standard (R$ 697/mês)">Começar grátis</button>
       </div>
@@ -877,10 +901,10 @@
           <div class="pr-meter" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></div>
         </div>
         <ul class="plan-feats">
-          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg></span><span>Plataforma completa, com a IA cuidando das campanhas todo dia</span></li>
+          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg></span><span>A IA cuidando das suas campanhas todo dia</span></li>
           <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg></span><span>Integração oficial com <strong>Instagram e Facebook</strong></span></li>
           <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg></span><span>Campanhas de WhatsApp e de venda, sem limite</span></li>
-          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg></span><span>Sem fidelidade, sem multa e sem taxa de setup</span></li>
+          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg></span><span>Sem fidelidade, multa ou taxa de setup</span></li>
         </ul>
         <button type="button" class="btn btn-primary plan-cta" data-modal-open data-plano-slug="premium" data-plano="Plano Premium (R$ 899/mês)">Começar grátis</button>
       </div>
@@ -893,7 +917,7 @@
       <span class="pe-go">Falar sobre o Escala <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h13M12 5l7 7-7 7"/></svg></span>
     </div>
 
-    <p class="plans-note reveal d2">Começou no Basic e passou dos R$ 500? <b>Você troca de plano quando quiser</b>, sem falar com ninguém e sem taxa nenhuma.</p>
+    <p class="plans-note reveal d2">Começou no Basic e passou dos R$ 500? <b>Você troca de plano quando quiser</b>, sem taxa nenhuma.</p>
   </div>
 </section>
 
@@ -905,20 +929,20 @@
         <div>
           <div class="eyebrow m-eyebrow">Opcional · vendido à parte</div>
           <h2>Não quer subir os anúncios sozinho? <em>Um especialista faz por você.</em></h2>
-          <p class="m-lead">A Mentoria ACL é para quem prefere entregar o volante. Um gestor de tráfego da Acelera Lead cria, sobe e cuida das suas campanhas dentro da sua conta, por três meses, acompanhando de perto o seu negócio.</p>
+          <p class="m-lead">É para quem prefere entregar o volante. Um gestor de tráfego da Acelera Lead cria, sobe e cuida das suas campanhas dentro da sua conta, por três meses.</p>
         </div>
         <div class="m-card">
           <span class="m-once">Pagamento único</span>
           <div class="m-price"><small>R$</small>499</div>
-          <p class="m-sub">Uma vez só, com <b>3 meses de acompanhamento</b>. Some ao plano que você escolher.</p>
+          <p class="m-sub">Uma vez só, com <b>3 meses de acompanhamento</b>.</p>
           <button type="button" class="btn btn-primary" data-modal-open data-plano-slug="mentoria" data-plano="Mentoria ACL (R$ 499, pagamento único)">Quero a Mentoria ACL</button>
         </div>
       </div>
 
       <ul class="m-list">
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg><span>Um <b>gestor de tráfego especialista</b> cria e gere suas campanhas dentro da sua conta</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg><span><b>Três meses de acompanhamento</b>, do primeiro anúncio ao ajuste fino do que já está vendendo</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg><span>A conta, as campanhas e os dados <b>continuam seus</b> — e você aprende vendo como é feito</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg><span>Um <b>gestor de tráfego especialista</b> cria e cuida das suas campanhas</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg><span><b>Três meses de acompanhamento</b>, do primeiro anúncio ao ajuste fino</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg><span>A conta, as campanhas e os dados <b>continuam seus</b></span></li>
       </ul>
 
       <div class="m-bill">
@@ -937,7 +961,7 @@
             <p>Só a mensalidade do plano + anúncios. Você segue na plataforma, com tudo já montado.</p>
           </div>
         </div>
-        <p class="m-note">Exemplo com o Standard: R$ 697 + R$ 499 no primeiro mês; R$ 697 por mês daí em diante. O investimento em anúncios é sempre à parte e pago direto às plataformas.</p>
+        <p class="m-note">Exemplo com o Standard: R$ 697 + R$ 499 no primeiro mês; R$ 697 por mês daí em diante. O investimento em anúncios é sempre à parte.</p>
       </div>
     </div>
   </div>
@@ -1020,7 +1044,7 @@
         <span class="field-err">Selecione uma opção.</span>
       </div>
       <button type="submit" class="btn btn-primary modal-submit">Continuar no WhatsApp</button>
-      <p class="modal-foot">A gente responde rápido. Cancele quando quiser.</p>
+      <p class="modal-foot">A gente responde rápido.</p>
     </form>
   </div>
 </div>
